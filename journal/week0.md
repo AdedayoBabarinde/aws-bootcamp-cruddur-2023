@@ -98,7 +98,9 @@ I created the budget by supplying the Accound ID and updating `budget.json` file
     
     `--notifications-with-subscribers file://aws/json/budget-notifications-with-subscribers.json`
 
-![Create a Budget](assets/create budget.png)
+![Create a Budget](assets/create%20budget.png)
+
+![Created Budget](assets/assets/budget.png)
 
 
 ## Achitectural diagram was drawn in Lucid as shown in the url
