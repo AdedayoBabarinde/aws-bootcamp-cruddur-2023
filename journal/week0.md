@@ -100,7 +100,7 @@ I created the budget by supplying the Accound ID and updating `budget.json` file
 
 ![Create a Budget](assets/create%20budget.png)
 
-![Created Budget](assets/assets/budget.png)
+![Created Budget](assets/budget.png)
 
 
 ## Achitectural diagram was drawn in Lucid as shown in the url
