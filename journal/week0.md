@@ -32,7 +32,7 @@ Using IAM Users Console, i created a new user "andy_bootcamp" and granted the us
 
 `export AWS_ACCESS_KEY_ID="AK********"`
 
-`export AWS_SECRET_ACCESS_KEY="VSGPhY**************"`
+`export AWS_SECRET_ACCESS_KEY="VS**************"`
 
 `export AWS_DEFAULT_REGION="eu-west-2"`
 
@@ -40,7 +40,7 @@ Using IAM Users Console, i created a new user "andy_bootcamp" and granted the us
  
  `gp env AWS_ACCESS_KEY_ID="AK******"`
 
-`gp env AWS_SECRET_ACCESS_KEY="VSGPhY***********"`
+`gp env AWS_SECRET_ACCESS_KEY="VSG***********"`
 
 `gp env AWS_DEFAULT_REGION=eu-west-2`
 
@@ -85,7 +85,7 @@ To obtain my AWS Account ID ,i run the following queries
 
 `export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)`
 
-`gp env AWS_ACCOUNT_ID="908743123045"`
+`gp env AWS_ACCOUNT_ID="908********"`
 
 I created the budget by supplying the Accound ID and updating `budget.json` file as follows
 
