@@ -51,7 +51,6 @@ Using IAM Users Console, i created a new user "andy_bootcamp" and granted the us
 
 `aws sts get-caller-identity`
 
-![aws_identity](https://user-images.githubusercontent.com/50416701/219276050-62a3581c-38da-4944-af41-c9fe9bebf4f2.png)
 
 
 # Enable Billing
