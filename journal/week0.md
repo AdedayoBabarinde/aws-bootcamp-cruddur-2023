@@ -70,8 +70,7 @@ aws sns subscribe \
   `--notification-endpoint=dba******@gmail.com`
 
 
-
-![image](https://user-images.githubusercontent.com/50416701/219518870-b091ca9f-12b9-4a3f-9852-d6b92c309c39.png)
+![Create SNS Topic](assets/sns.png)
 
 
 
