@@ -1,6 +1,6 @@
 # Week 0 — Billing and Architecture
 
-##Install AWS CLI
+## Install AWS CLI
 
 I installed AWS CLI as follows
 
@@ -18,7 +18,7 @@ I Updated the `.gitpod.yml` to include the following task as shown
 ![image](https://user-images.githubusercontent.com/50416701/219223311-32974d4e-ddf2-489a-9e1e-4a08116d3cdb.png)
 
 
-#Create a new User and Generate AWS Credentials
+# Create a new User and Generate AWS Credentials
 
 Using IAM Users Console, i created a new user "andy_bootcamp" and granted the user `AdministratorAccess` with security credential(via `Access Key`)
 
@@ -28,7 +28,7 @@ Using IAM Users Console, i created a new user "andy_bootcamp" and granted the us
 
 
 
-#Set Environment Variables for the AWS Account Credentials
+# Set Environment Variables for the AWS Account Credentials
 
 `export AWS_ACCESS_KEY_ID="AK********"`
 
@@ -46,14 +46,14 @@ Using IAM Users Console, i created a new user "andy_bootcamp" and granted the us
 
 
 
-#I checked if AWS CLI is working as follows
+# I checked if AWS CLI is working as follows
 
 `aws sts get-caller-identity`
 
 ![aws_identity](https://user-images.githubusercontent.com/50416701/219276050-62a3581c-38da-4944-af41-c9fe9bebf4f2.png)
 
 
-#Enable Billing
+# Enable Billing
 
 To create billing alarm, i created an SNS topic
 
@@ -79,7 +79,7 @@ aws sns subscribe \
 ![image](https://user-images.githubusercontent.com/50416701/219518933-2e76713d-49c8-4ada-aed2-f98a0937637b.png)
 
 
-#Create an AWS Budget
+# Create an AWS Budget
 
 To obtain my AWS Account ID ,i run the following queries
 
@@ -100,6 +100,6 @@ I created the budget by supplying the Accound ID and updating `budget.json` file
 ![image](https://user-images.githubusercontent.com/50416701/219520003-5ebcf1d7-de8a-4021-99fb-7e6a5e109f61.png)
 
 
-##Achitectural diagram was drawn in Lucid as shown in the url
+## Achitectural diagram was drawn in Lucid as shown in the url
 
 https://lucid.app/lucidchart/34b06133-4f39-4ad1-b568-ca7c6e988e29/edit?viewport_loc=-138%2C-240%2C3330%2C1461%2C0_0&invitationId=inv_1d2954d3-bd8e-4015-8e3b-a32607b6e956
