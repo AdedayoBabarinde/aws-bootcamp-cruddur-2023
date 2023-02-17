@@ -75,11 +75,6 @@ aws sns subscribe \
 
 
 
-
-
-![image](https://user-images.githubusercontent.com/50416701/219518933-2e76713d-49c8-4ada-aed2-f98a0937637b.png)
-
-
 # Create an AWS Budget
 
 To obtain my AWS Account ID ,i run the following queries
