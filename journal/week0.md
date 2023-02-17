@@ -103,3 +103,10 @@ I recreated the Logical Achitectural diagram using Lucid as shown in the url
 [Lucid Charts Share Link ](https://lucid.app/lucidchart/34b06133-4f39-4ad1-b568-ca7c6e988e29/edit?viewport_loc=-138%2C-240%2C3330%2C1461%2C0_0&invitationId=inv_1d2954d3-bd8e-4015-8e3b-a32607b6e956)
 
 ![Cruddur Logical Design](assets/logical_architectural_diagram.jpg)
+
+
+## Homework Challenges
+
+[`json` file used to create sample budget](https://github.com/AdedayoBabarinde/aws-bootcamp-cruddur-2023/blob/main/aws/json/budget.json)
+
+[`json` file for alarm configuration](https://github.com/AdedayoBabarinde/aws-bootcamp-cruddur-2023/blob/main/aws/json/alarm_config.json)
