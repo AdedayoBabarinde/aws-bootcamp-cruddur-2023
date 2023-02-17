@@ -96,6 +96,8 @@ I created the budget by supplying the Accound ID and updating `budget.json` file
 ![Created Budget](assets/budget.png)
 
 
-## Achitectural diagram was drawn in Lucid as shown in the url
+## I created the Logical Achitectural diagram using Lucid as shown in the url
 
 https://lucid.app/lucidchart/34b06133-4f39-4ad1-b568-ca7c6e988e29/edit?viewport_loc=-138%2C-240%2C3330%2C1461%2C0_0&invitationId=inv_1d2954d3-bd8e-4015-8e3b-a32607b6e956
+
+![Cruddur Logical Design](assets/logical_architectural_diagram.jpg)
