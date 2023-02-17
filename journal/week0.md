@@ -2,15 +2,16 @@
 
 ## Install AWS CLI
 
-I installed AWS CLI as follows
-
-Moved in to worksapce directory  `cd workspace`
+I installed AWS CLI for linux using the following sets of command
 
 ```curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" ```
 
 ```unzip awscliv2.zip```
 
 ```sudo ./aws/install```
+
+I followed the instruction on [AWS CLI documentation page](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
 
 
 I Updated the `.gitpod.yml` to include the following task as shown
