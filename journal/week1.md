@@ -134,7 +134,7 @@ services:
 To verify if the notification feature is active, i ensured that port 3000 and 4567 are open,
 and opened the frontend url in a browser as follows
 
-[Notification confirmation](https://github.com/AdedayoBabarinde/aws-bootcamp-cruddur-2023/blob/main/journal/assets/notification.png)
+![Notification confirmation](https://github.com/AdedayoBabarinde/aws-bootcamp-cruddur-2023/blob/main/journal/assets/notification.png)
 
 
 # Adding DynamoDB Local and Postgres
