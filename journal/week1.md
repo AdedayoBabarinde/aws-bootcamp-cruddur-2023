@@ -130,3 +130,60 @@ services:
     volumes:
       - ./frontend-react-js:/frontend-react-js
       ```
+
+To verify if the notification feature is active, i ensured that port 3000 and 4567 are open,
+and opened the frontend url in a browser as follows
+
+[Notification confirmation](https://github.com/AdedayoBabarinde/aws-bootcamp-cruddur-2023/blob/main/journal/assets/notification.png)
+
+
+# Adding DynamoDB Local and Postgres
+
+I integrated the following into THE existing docker compose file:
+
+## Postgres
+
+```
+services:
+  db:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
+    driver: local
+    ```
+    
+   I  installed the postgres client into Gitpod as follows
+   
+   ```
+     - name: postgres
+    init: |
+      curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+      echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+      sudo apt update
+      sudo apt install -y postgresql-client-13 libpq-dev
+      ```
+      
+      
+      Adding the DynamoDB Local
+      
+      services:
+  dynamodb-local:
+    # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
+    # We needed to add user:root to get this working.
+    user: root
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
