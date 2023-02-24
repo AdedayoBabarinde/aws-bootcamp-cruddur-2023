@@ -105,6 +105,8 @@ I Built the  Container as follows
 
 # Multiple Containers
 
+I ensured that i can orchestrate multiple containers to run side by side as follows
+
 ## Create a docker-compose file
 
 I created a `docker-compose.yml` at the root directory of the project as follows
@@ -187,3 +189,5 @@ volumes:
     volumes:
       - "./docker/dynamodb:/home/dynamodblocal/data"
     working_dir: /home/dynamodblocal
+    
+    #Homework Challenges
