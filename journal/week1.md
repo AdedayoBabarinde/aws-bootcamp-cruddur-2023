@@ -1,5 +1,9 @@
 # Week 1 — App Containerization
 
+##Required Homework
+
+
+
 I containerize the Cruddur App with the procedures below :
 
 
@@ -8,7 +12,7 @@ I containerize the Cruddur App with the procedures below :
 I containerized the App Backend as follows
 
 ### I installed Python as follows:
-```
+```sh
 cd backend-flask
 export FRONTEND_URL="*"
 export BACKEND_URL="*"
@@ -17,13 +21,16 @@ cd ..
 ```
 
 I ensured that port  4567 is unlocked on the port tab
-I opened the link for port 4567 in a browser and appended `/api/activities/home` to the url.
+I opened the link for port 4567 in a browser and appended `/api/activities/home` to the backend url.
 
-[]()
+![image](https://user-images.githubusercontent.com/50416701/221303330-4b2b20b9-3800-4be6-b62a-d465dc706038.png)
+
+![image](https://user-images.githubusercontent.com/50416701/221303267-e48eb118-33d4-4170-9bf2-7c05725450c1.png)
+
 
 ### I added Dockerfile to the `backend-flask` directory
 
-```
+```dockerfile
 FROM python:3.10-slim-buster
 
 WORKDIR /backend-flask
@@ -43,14 +50,16 @@ CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 ## Build Container
 
 
-```docker build -t  backend-flask ./backend-flask```
+```sh
+docker build -t  backend-flask ./backend-flask
+```
 
 
 ## Run Container
 
 I ran the container as follows
 
-```
+```sh
 docker run --rm -p 4567:4567 -it backend-flask
 FRONTEND_URL="*" BACKEND_URL="*" docker run --rm -p 4567:4567 -it backend-flask
 export FRONTEND_URL="*"
@@ -64,7 +73,9 @@ unset BACKEND_URL="*"
 
 ### I ensured the container is running in the background as follows
 
-`docker container run --rm -p 4567:4567 -d backend-flask`
+```sh
+docker container run --rm -p 4567:4567 -d backend-flask
+```
 
 
 
@@ -85,7 +96,7 @@ npm i
 
 I created the Docker file in the  `frontend-react-js` directory as populated it as follows
 
-```
+```dockerfile
 FROM node:16.18
 
 ENV PORT=3000
@@ -111,7 +122,7 @@ I ensured that i can orchestrate multiple containers to run side by side as foll
 
 I created a `docker-compose.yml` at the root directory of the project as follows
 
-````
+```yml
 version: "3.8"
 services:
   backend-flask:
@@ -144,10 +155,11 @@ and opened the frontend url in a browser as follows
 
 I integrated the following into the existing docker compose file:
 
-## Postgres
+ ## Run Postgres Container and Ensure it Works
+- Added the following code to my docker-compose file
 
-```
-services:
+
+```yml
   db:
     image: postgres:13-alpine
     restart: always
@@ -165,7 +177,7 @@ volumes:
     
    I  installed the postgres client into Gitpod as follows
    
-   ```
+   ```yml
      - name: postgres
     init: |
       curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
