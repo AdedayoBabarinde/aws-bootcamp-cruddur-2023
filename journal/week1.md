@@ -136,7 +136,7 @@ services:
 To verify if the notification feature is active, i ensured that port 3000 and 4567 are open,
 and opened the frontend url in a browser as follows
 
-![notification](https://user-images.githubusercontent.com/50416701/221266056-36092ae0-3d83-4960-8b31-83ee1ad3fe1e.png)
+![image](https://user-images.githubusercontent.com/50416701/221268154-f688eb1d-acd8-43cc-9ddf-ec0925c649fd.png)
 
 
 
@@ -200,10 +200,12 @@ volumes:
     psql -Upostgres --host localhost
     ```
     
-    ![postgres](https://user-images.githubusercontent.com/50416701/221264230-5ee9bff0-3f79-400a-98bd-c46e6a9e14b9.png)
+    ![image](https://user-images.githubusercontent.com/50416701/221267926-82fa83a2-ce8e-401a-a3f4-76f204118cb1.png)
+
 
     
-    ![client](https://user-images.githubusercontent.com/50416701/221266184-1e77cc72-233c-4d07-a0d0-495fec4c17e8.png)
+    ![image](https://user-images.githubusercontent.com/50416701/221267805-35671783-f759-44fc-9ccb-7bcf3113a3a1.png)
+
 
 
     
