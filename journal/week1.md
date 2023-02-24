@@ -225,3 +225,9 @@ volumes:
     
     
     #Homework Challenges
+
+## Pushing Flask Back-End Image to Docker Hub
+- Used `docker login` command to login to my docker hub account. [docker login -u "username" -p "password" docker.io]
+- Tag the image `docker tag aws-bootcamp-cruddur-2023-backend-flask:latest dbabarinde/cloud:bootcamp`
+- Pushed the image `docker push dbabarinde/cloud:bootcamp`
+- Here is the [image url](https://hub.docker.com/r/dbabarinde/cloud) in docker hub.
