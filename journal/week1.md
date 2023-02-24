@@ -147,7 +147,8 @@ services:
 To verify if the notification feature is active, i ensured that port 3000 and 4567 are open,
 and opened the frontend url in a browser as follows
 
-![image](https://user-images.githubusercontent.com/50416701/221320545-c0e8c1de-d79e-47e5-ab2f-444929ef9a89.png)
+![image](https://user-images.githubusercontent.com/50416701/221320812-7bc5e114-cdb5-4eb6-a622-9a0340f491f9.png)
+
 
 
 
