@@ -136,7 +136,8 @@ services:
 To verify if the notification feature is active, i ensured that port 3000 and 4567 are open,
 and opened the frontend url in a browser as follows
 
-![Notification confirmation](assets/notification.png)
+![notification](https://user-images.githubusercontent.com/50416701/221266056-36092ae0-3d83-4960-8b31-83ee1ad3fe1e.png)
+
 
 
 # Adding DynamoDB Local and Postgres
@@ -199,9 +200,11 @@ volumes:
     psql -Upostgres --host localhost
     ```
     
-    ![Postgres Working](assets/postgres.png)
+    ![postgres](https://user-images.githubusercontent.com/50416701/221264230-5ee9bff0-3f79-400a-98bd-c46e6a9e14b9.png)
+
     
-    ![Postgres Working](assets/client.png)
+    ![client](https://user-images.githubusercontent.com/50416701/221266184-1e77cc72-233c-4d07-a0d0-495fec4c17e8.png)
+
 
     
     
