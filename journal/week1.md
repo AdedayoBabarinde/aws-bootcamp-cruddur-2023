@@ -141,7 +141,7 @@ and opened the frontend url in a browser as follows
 
 # Adding DynamoDB Local and Postgres
 
-I integrated the following into THE existing docker compose file:
+I integrated the following into the existing docker compose file:
 
 ## Postgres
 
@@ -189,5 +189,22 @@ volumes:
     volumes:
       - "./docker/dynamodb:/home/dynamodblocal/data"
     working_dir: /home/dynamodblocal
+    
+    ## Proof of Postgres Client and Extension Working
+
+    
+    I accessed the postgres database in the command line by running
+    
+    ```
+    psql -Upostgres --host localhost
+    ```
+    
+    ![Postgres Working](assets/postgres.png)
+    
+    ![Postgres Working](assets/client.png)
+
+    
+    
+    
     
     #Homework Challenges
