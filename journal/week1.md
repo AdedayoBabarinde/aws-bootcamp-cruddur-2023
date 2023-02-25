@@ -235,3 +235,10 @@ volumes:
 - Tag the image `docker tag aws-bootcamp-cruddur-2023-backend-flask:latest dbabarinde/cloud:bootcamp`
 - Pushed the image `docker push dbabarinde/cloud:bootcamp`
 - Here is the [image url](https://hub.docker.com/r/dbabarinde/cloud) in docker hub.
+
+
+
+## Launch EC2 Instance && Pull My Public Flask Image
+
+![image](https://user-images.githubusercontent.com/50416701/221348402-c04411ad-6858-4d9f-b424-ecce3ead3a67.png)
+
