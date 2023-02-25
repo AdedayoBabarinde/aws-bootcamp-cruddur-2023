@@ -242,3 +242,27 @@ volumes:
 
 ![image](https://user-images.githubusercontent.com/50416701/221348402-c04411ad-6858-4d9f-b424-ecce3ead3a67.png)
 
+
+
+
+## Implement Healthchecks in  GitPod Docker Compose Files
+- I added health checks for front-end and backend by adding the code to the Docker compose file
+
+```yml
+healthcheck: 
+      test: wget --no-verbose --tries=1 --spider https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}/api/activities/home || exit 1
+      interval: 20s 
+      retries: 2 
+      start_period: 20s 
+      timeout: 5s 
+      ```
+
+
+ ```yml
+ healthcheck:
+      test: curl --fail https://3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST} || exit 1
+      interval: 20s
+      retries: 2
+      start_period: 20s
+      timeout: 10s
+      ```
