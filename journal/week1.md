@@ -1,6 +1,6 @@
 # Week 1 — App Containerization
 
-##Required Homework
+## Required Homework
 
 
 
@@ -142,7 +142,7 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend-react-js:/frontend-react-js
-      ```
+  ```
 
 To verify if the notification feature is active, i ensured that port 3000 and 4567 are open,
 and opened the frontend url in a browser as follows
@@ -175,7 +175,7 @@ I integrated the following into the existing docker compose file:
 volumes:
   db:
     driver: local
-    ```
+  ```
     
    I  installed the postgres client into Gitpod as follows
    
@@ -186,7 +186,7 @@ volumes:
       echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
       sudo apt update
       sudo apt install -y postgresql-client-13 libpq-dev
-      ```
+    ```
       
       
       Adding the DynamoDB Local
@@ -255,7 +255,7 @@ healthcheck:
       retries: 2 
       start_period: 20s 
       timeout: 5s 
-      ```
+ ```
 
 
  ```yml
@@ -265,4 +265,4 @@ healthcheck:
       retries: 2
       start_period: 20s
       timeout: 10s
-      ```
+  ```
