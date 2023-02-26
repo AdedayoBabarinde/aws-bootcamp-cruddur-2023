@@ -182,7 +182,8 @@ volumes:
     ```
       
   ### Adding the DynamoDB Local
-      
+  - I Added the following code to my docker-compose file
+
       services:
   dynamodb-local:
     # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
@@ -218,7 +219,7 @@ volumes:
     
     
     
-# Homework Challenges
+## Homework Challenges
 
 
 ## Pushing Flask Back-End Image to Docker Hub
