@@ -205,12 +205,12 @@ volumes:
     
     'psql -Upostgres --host localhost'
     
-    ![image](https://user-images.githubusercontent.com/50416701/221320487-345d98fd-b16f-44ea-801c-29c702b481ab.png)
+    ![](https://user-images.githubusercontent.com/50416701/221320487-345d98fd-b16f-44ea-801c-29c702b481ab.png)
 
 
 
     
-    ![image](https://user-images.githubusercontent.com/50416701/221320445-23a23179-0eec-453c-8c86-049dafe57725.png)
+    ![](https://user-images.githubusercontent.com/50416701/221320445-23a23179-0eec-453c-8c86-049dafe57725.png)
 
 
 
@@ -220,8 +220,6 @@ volumes:
     
     
 ## Homework Challenges
-
-
 ## Pushing Flask Back-End Image to Docker Hub
 - Used `docker login` command to login to my docker hub account. [docker login -u "username" -p "password" docker.io]
 - Tag the image `docker tag aws-bootcamp-cruddur-2023-backend-flask:latest dbabarinde/cloud:bootcamp`
