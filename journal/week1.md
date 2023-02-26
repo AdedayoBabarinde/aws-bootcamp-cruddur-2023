@@ -181,7 +181,7 @@ volumes:
       sudo apt install -y postgresql-client-13 libpq-dev
     ```
       
-  ## Adding the DynamoDB Local
+  ### Adding the DynamoDB Local
       
       services:
   dynamodb-local:
@@ -197,7 +197,7 @@ volumes:
       - "./docker/dynamodb:/home/dynamodblocal/data"
     working_dir: /home/dynamodblocal
     
-    ## Proof of Postgres Client and Extension Working
+    ### Proof of Postgres Client and Extension Working
 
     
     I accessed the postgres database in the command line by running
@@ -219,6 +219,7 @@ volumes:
     
     
 # Homework Challenges
+
 
 ## Pushing Flask Back-End Image to Docker Hub
 - Used `docker login` command to login to my docker hub account. [docker login -u "username" -p "password" docker.io]
