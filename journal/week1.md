@@ -203,9 +203,7 @@ volumes:
     
     I accessed the postgres database in the command line by running
     
-    ```
-    psql -Upostgres --host localhost
-    ```
+    'psql -Upostgres --host localhost'
     
     ![image](https://user-images.githubusercontent.com/50416701/221320487-345d98fd-b16f-44ea-801c-29c702b481ab.png)
 
@@ -221,7 +219,7 @@ volumes:
     
     
     
-    #Homework Challenges
+# Homework Challenges
 
 ## Pushing Flask Back-End Image to Docker Hub
 - Used `docker login` command to login to my docker hub account. [docker login -u "username" -p "password" docker.io]
@@ -249,6 +247,7 @@ healthcheck:
       start_period: 20s 
       timeout: 5s 
  ```
+
 
 
  ```yml
