@@ -230,7 +230,7 @@ volumes:
 
 ## Launch EC2 Instance && Pull My Public Flask Image
 
-![dockerpull](https://user-images.githubusercontent.com/50416701/221433679-b8d6a996-cd53-4145-91b6-4c7a2c3ca337.jpg)
+![dockerpull](assets/dockerpull.jpg)
 
 
 
