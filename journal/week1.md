@@ -20,8 +20,8 @@ python3 -m flask run --host=0.0.0.0 --port=4567
 cd ..
 ```
 
-I ensured that port  4567 is unlocked on the port tab
-I opened the link for port 4567 in a browser and appended `/api/activities/home` to the backend url.
+- I ensured that port  4567 is unlocked on the port tab
+- I opened the link for port 4567 in a browser and appended `/api/activities/home` to the backend url.
 
 ![image](https://user-images.githubusercontent.com/50416701/221303330-4b2b20b9-3800-4be6-b62a-d465dc706038.png)
 
@@ -233,7 +233,7 @@ volumes:
 
 ## Launch EC2 Instance && Pull My Public Flask Image
 
-![image](https://user-images.githubusercontent.com/50416701/221348402-c04411ad-6858-4d9f-b424-ecce3ead3a67.png)
+![dockerpull](https://user-images.githubusercontent.com/50416701/221433679-b8d6a996-cd53-4145-91b6-4c7a2c3ca337.jpg)
 
 
 
