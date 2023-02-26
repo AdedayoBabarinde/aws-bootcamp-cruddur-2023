@@ -11,7 +11,8 @@ I containerize the Cruddur App with the procedures below :
 
 I containerized the App Backend as follows
 
-### I installed Python as follows:
+- I installed Python as follows:
+
 ```sh
 cd backend-flask
 export FRONTEND_URL="*"
@@ -76,7 +77,7 @@ docker container run --rm -p 4567:4567 -d backend-flask
 
 
 
-# Containerize Frontend
+## Containerize Frontend
 
 
 I ran NPM Install before building the container to copy the contents of node_modules
@@ -86,7 +87,7 @@ cd frontend-react-js
 npm i 
 ```
 
-# Create Docker File
+## Create Docker File
 
 
 I created the Docker file in the  `frontend-react-js` directory as populated it as follows
@@ -107,9 +108,8 @@ I Built the  Container as follows
 ##  I ran the Container as follows
 `docker run -p 3000:3000 -d frontend-react-js`
 
-# Multiple Containers
 
-I ensured that i can orchestrate multiple containers to run side by side as follows
+- I ensured that i can orchestrate multiple containers to run side by side as follows
 
 ## Create a docker-compose file
 
@@ -146,7 +146,7 @@ and opened the frontend url in a browser as follows
 
 
 
-# Adding DynamoDB Local and Postgres
+## Adding DynamoDB Local and Postgres
 
 I integrated the following into the existing docker compose file:
 
