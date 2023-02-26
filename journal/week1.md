@@ -179,11 +179,11 @@ volumes:
       echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
       sudo apt update
       sudo apt install -y postgresql-client-13 libpq-dev
-    ```
+  ```
       
   ### Adding the DynamoDB Local
   - I Added the following code to my docker-compose file
-
+```
       services:
   dynamodb-local:
     # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
@@ -197,13 +197,14 @@ volumes:
     volumes:
       - "./docker/dynamodb:/home/dynamodblocal/data"
     working_dir: /home/dynamodblocal
-    
-    ### Proof of Postgres Client and Extension Working
+   ``` 
+  
+  ## Proof of Postgres Client and Extension Working
 
     
-    I accessed the postgres database in the command line by running
-    
-    'psql -Upostgres --host localhost'
+- I accessed the postgres database in the command line by running 
+   
+  'psql -Upostgres --host localhost'
     
     ![](https://user-images.githubusercontent.com/50416701/221320487-345d98fd-b16f-44ea-801c-29c702b481ab.png)
 
@@ -219,7 +220,9 @@ volumes:
     
     
     
+    
 ## Homework Challenges
+
 ## Pushing Flask Back-End Image to Docker Hub
 - Used `docker login` command to login to my docker hub account. [docker login -u "username" -p "password" docker.io]
 - Tag the image `docker tag aws-bootcamp-cruddur-2023-backend-flask:latest dbabarinde/cloud:bootcamp`
@@ -229,6 +232,7 @@ volumes:
 
 
 ## Launch EC2 Instance && Pull My Public Flask Image
+
 
 ![dockerpull](assets/dockerpull.jpg)
 
