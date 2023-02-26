@@ -170,7 +170,7 @@ volumes:
     driver: local
   ```
     
-   I  installed the postgres client into Gitpod as follows
+  -  I  installed the postgres client into Gitpod as follows
    
    ```yml
      - name: postgres
@@ -181,8 +181,7 @@ volumes:
       sudo apt install -y postgresql-client-13 libpq-dev
     ```
       
-      
-      Adding the DynamoDB Local
+  ## Adding the DynamoDB Local
       
       services:
   dynamodb-local:
