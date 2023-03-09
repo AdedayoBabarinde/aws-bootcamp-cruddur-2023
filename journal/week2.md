@@ -217,3 +217,7 @@ image.png
 
 
 
+## Rollbar
+
+### Integrate Rollbar for Error Logging
+
