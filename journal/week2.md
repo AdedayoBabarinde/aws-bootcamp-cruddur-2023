@@ -54,10 +54,12 @@ with tracer.start_as_current_span("home-activites-mock-data"):
 - Custom fields are prefix with app so we could find them easily like `"app.now"`
 
 **Run queries to explore traces within Honeycomb.io**
+
 ![image](https://user-images.githubusercontent.com/50416701/224509032-9dbd81f9-4303-49fa-861b-82ed894c51a0.png)
 
 
 **Features of the our custom span**
+
 ![image](https://user-images.githubusercontent.com/50416701/224508987-35f8e28c-fc3b-4f62-ae3d-729392aba5a5.png)
 
 
@@ -148,6 +150,7 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray-sampling-rul
 
 ### Observe X-Ray traces within the AWS Console
 **proof of work**
+
 ![image](https://user-images.githubusercontent.com/50416701/224508270-90bcd719-b74e-4459-84ca-bdc262cac362.png)
 
 
@@ -213,8 +216,9 @@ def data_home():
   data = HomeActivities.run(logger=LOGGER)
   return data, 200
 ```
-**Commented the logs to avoid spend because I'll be using Rollbar and HoneyComb**<br>
+
 **Proof of work**
+
 ![image](https://user-images.githubusercontent.com/50416701/224509461-a59611ff-9e79-4a7b-87fc-6f6edf6d6881.png)
 
 
@@ -227,7 +231,7 @@ def data_home():
 
 ### Integrate Rollbar for Error Logging
 
-
+- I exported my credentials of rollbar and put them inside gitpod envs.
 
 ### Trigger an error and observe it
 
