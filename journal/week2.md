@@ -54,10 +54,12 @@ with tracer.start_as_current_span("home-activites-mock-data"):
 - Custom fields are prefix with app so we could find them easily like `"app.now"`
 
 **Run queries to explore traces within Honeycomb.io**
+![image](https://user-images.githubusercontent.com/50416701/224509032-9dbd81f9-4303-49fa-861b-82ed894c51a0.png)
 
 
 **Features of the our custom span**
-traces_one.png
+![image](https://user-images.githubusercontent.com/50416701/224508987-35f8e28c-fc3b-4f62-ae3d-729392aba5a5.png)
+
 
 **Important Notes from Live Stream**:
 - Why opentelemetry exist?<br>
@@ -146,10 +148,11 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray-sampling-rul
 
 ### Observe X-Ray traces within the AWS Console
 **proof of work**
-![image](https://user-images.githubusercontent.com/83673888/222731020-f5ee2edb-a94f-45e3-8892-4a393a3ac018.png)
+![image](https://user-images.githubusercontent.com/50416701/224508270-90bcd719-b74e-4459-84ca-bdc262cac362.png)
 
 
-> See My Implementation here [commit details](https://github.com/AbdassalamAhmad/aws-bootcamp-cruddur-2023/commit/810593ccf7171810bb04ac28ed117773afa0b209)
+
+> See My Implementation here [commit details](https://github.com/AdedayoBabarinde/aws-bootcamp-cruddur-2023/commits/main)
 
 
 
@@ -212,7 +215,10 @@ def data_home():
 ```
 **Commented the logs to avoid spend because I'll be using Rollbar and HoneyComb**<br>
 **Proof of work**
-image.png
+![image](https://user-images.githubusercontent.com/50416701/224509461-a59611ff-9e79-4a7b-87fc-6f6edf6d6881.png)
+
+
+
 
 
 
@@ -221,3 +227,12 @@ image.png
 
 ### Integrate Rollbar for Error Logging
 
+
+
+### Trigger an error and observe it
+
+- Removed the return of the function from home_activities.py file. Observation is as shown below
+![image](https://user-images.githubusercontent.com/50416701/224507960-f09de091-3de3-4fe7-a6f0-30a351cbef26.png)
+
+
+![image](https://user-images.githubusercontent.com/50416701/224507936-bfc43eaf-b8d5-4540-96c3-c4d79502ffa5.png)
