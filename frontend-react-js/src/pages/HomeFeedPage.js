@@ -40,7 +40,6 @@ export default function HomeFeedPage() {
     }
   };
 
-
   const checkAuth = async () => {
     Auth.currentAuthenticatedUser({
       // Optional, By default is false. 
@@ -59,7 +58,7 @@ export default function HomeFeedPage() {
     })
     .catch((err) => console.log(err));
   };
-
+  
   React.useEffect(()=>{
     //prevents double call
     if (dataFetchedRef.current) return;
