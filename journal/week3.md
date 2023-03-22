@@ -148,11 +148,12 @@ import { Auth } from 'aws-amplify';
 - Encountered an error when authenticating because the user created manually from AWS Cognito Console wasn't **"Verified"**
 - Run this command to solve the issue (confirming the password)
 ```sh
-aws cognito-idp admin-set-user-password --username 864ec250-50f1-70e9-9698-10aea66c0e5b --password Test123- --user-pool-id eu-south-1_VVTlAbxEV --permanent
+aws cognito-idp admin-set-user-password --username 864ec250-50f1-70e9-9698-10aea66c0e5b --password Mololuwa12@- --user-pool-id eu-west-2_VVTlAbxEV --permanent
 ```
 
 - Added **"name"** to our user manually form cognito console.<br>
-![image](https://user-images.githubusercontent.com/83673888/223082761-a6b8a5af-d869-4c01-93aa-1b0c1b631af1.png)
+![image](https://user-images.githubusercontent.com/50416701/226869053-50a3c1c3-a0ac-432f-b0e4-f7039fa0c643.png)
+
 
 ### Signup Page
 - Clearly, we shouldn't be creating users by ourselves manually so we will create a signup page so that users can automatically signup and create content.
@@ -310,7 +311,7 @@ def data_home():
   return data, 200
 ```
 
-- Imported this file `cognito_jwt_token.py` from the library and edit it to work in our app, here is the final version [cognito_jwt_token.py](https://github.com/AbdassalamAhmad/aws-bootcamp-cruddur-2023/blob/main/backend-flask/lib/cognito_jwt_token.py)
+- Imported this file `cognito_jwt_token.py` from the library and edit it to work in our app
 
 - Added this code to see if we're logged in by showing us more data in our `home feed page`
 ```py
@@ -335,8 +336,8 @@ def run(cognito_user_id=None):
 
 - Added these two env vars to make our 3rd library work under back-end service in `docker-compose-gitpod.yml`
 ```yml
-      AWS_COGNITO_USER_POOL_ID: "eu-south-1_****"
-      AWS_COGNITO_USER_POOL_CLIENT_ID: "7mph1qpebk****"
+      AWS_COGNITO_USER_POOL_ID: "eu-west-2_****"
+      AWS_COGNITO_USER_POOL_CLIENT_ID: "FL5gh7PYx****"
 ```
 
 - Removed the access tocken after we sign out by adding this line to `ProfileInfo.js`
@@ -347,10 +348,6 @@ def run(cognito_user_id=None):
         localStorage.removeItem("access_token")
     }
 ```
-
-
-### Improved UI and Setup Theme CSS Variables
-- I followed Andrew tutorial on [this video](https://www.youtube.com/watch?v=m9V4SmJWoJU&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=44) and made same changes, here is my [commit details](https://github.com/AbdassalamAhmad/aws-bootcamp-cruddur-2023/commit/387279f360d3ec22d7b6ce8fd24671ba1e3d191d)
 
 
 
