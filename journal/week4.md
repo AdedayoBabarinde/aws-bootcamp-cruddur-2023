@@ -65,8 +65,6 @@ psql $CONNECTION_URL
 cruddur=#
 ```
 
-## Use Bash Scripts
-- Reason for using Bash Scripts: we will use schema file often, So we will be able to turn down the database, set up the database, load the schema.
 - Created these scripts `db-create`, `db-drop`, `db-schema-load`, `db-connect`, `db-seed`, `db-sessions`, `db-setup`.
 - Give the scipts the required permissions `rwxr--r--`
 ```sh
@@ -130,7 +128,7 @@ CREATE TABLE public.activities (
 - The meaning of `uuid` inside `public.activities` table is a unique id for each activity.
 - The meaning of `user_uuid` inside `public.activities` table is the user unique id who did that activity.
 
-### Seed Data into our Databse
+### Seed Data into our Database
 ```sql
 INSERT INTO public.users (display_name, handle, cognito_user_id)
 VALUES
