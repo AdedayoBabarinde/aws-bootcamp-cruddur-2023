@@ -15,11 +15,8 @@ tasks:
       sudo apt update
       sudo apt install -y postgresql-client-13 libpq-dev
     command: |
-      gp sync-await aws-cli
       export GITPOD_IP=$(curl ifconfig.me)
       source  "$THEIA_WORKSPACE_ROOT/backend-flask/bin/rds-update-sg-rule"
-
-
   - name: react-js
     command: |
       cd frontend-react-js
@@ -27,6 +24,7 @@ tasks:
 vscode:
   extensions:
     - 42Crunch.vscode-openapi
+    - cweijan.vscode-postgresql-client2
 
 ports:
   - name: frontend

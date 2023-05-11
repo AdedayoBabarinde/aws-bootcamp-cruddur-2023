@@ -3,7 +3,7 @@ import React from "react";
 import { useParams } from 'react-router-dom';
 import {ReactComponent as Logo} from '../components/svg/logo.svg';
 
-// [TODO] Authenication
+// Authenication
 import { Auth } from 'aws-amplify';
 
 export default function ConfirmationPage() {
@@ -33,19 +33,27 @@ export default function ConfirmationPage() {
       // for this to be an okay match?
       console.log(err)
       if (err.message == 'Username cannot be empty'){
-        setCognitoErrors("You need to provide an email in order to send Resend Activiation Code")   
+        setErrors("You need to provide an email in order to send Resend Activiation Code")   
       } else if (err.message == "Username/client id combination not found."){
-        setCognitoErrors("Email is invalid or cannot be found.")   
+        setErrors("Email is invalid or cannot be found.")   
       }
     }
-  }
+}
+
+  // Get email from the signup page where we stored the email in localStorage
+  React.useEffect(() => {
+    const storedEmail = localStorage.getItem('email');
+    if (storedEmail) {
+      setEmail(storedEmail);
+    }
+  }, []);
 
   const onsubmit = async (event) => {
     event.preventDefault();
     setErrors('')
     try {
       await Auth.confirmSignUp(email, code);
-      window.location.href = "/"
+      window.location.href = "/signin"
     } catch (error) {
       setErrors(error.message)
     }
@@ -65,11 +73,13 @@ export default function ConfirmationPage() {
     code_button = <button className="resend" onClick={resend_code}>Resend Activation Code</button>;
   }
 
-  React.useEffect(()=>{
-    if (params.email) {
-      setEmail(params.email)
-    }
-  }, [])
+
+
+  // React.useEffect(()=>{
+  //   if (params.email) {
+  //     setEmail(params.email)
+  //   }
+  // }, [])
 
   return (
     <article className="confirm-article">
