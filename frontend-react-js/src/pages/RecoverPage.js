@@ -2,6 +2,7 @@ import './RecoverPage.css';
 import React from "react";
 import {ReactComponent as Logo} from '../components/svg/logo.svg';
 import { Link } from "react-router-dom";
+
 import { Auth } from 'aws-amplify';
 
 export default function RecoverPage() {
@@ -21,6 +22,7 @@ export default function RecoverPage() {
     .catch((err) => setErrors(err.message) );
     return false
   }
+  
   const onsubmit_confirm_code = async (event) => {
     event.preventDefault();
     setErrors('')
@@ -29,7 +31,7 @@ export default function RecoverPage() {
       .then((data) => setFormState('success'))
       .catch((err) => setErrors(err.message) );
     } else {
-      setCognitoErrors('Passwords do not match')
+      setErrors('Passwords do not match')
     }
     return false
   }
